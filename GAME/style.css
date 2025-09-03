@@ -1,0 +1,110 @@
+/* Animated neon gradient background */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(270deg, #050505, #111, #050505);
+    background-size: 600% 600%;
+    color: #0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* Game container */
+.game-container {
+    text-align: center;
+    max-width: 500px;
+    width: 90vw;
+    padding: 20px;
+    border: 3px solid #0ff;
+    border-radius: 15px;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px #0ff;
+}
+
+/* Heading */
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+    margin-bottom: 10px;
+}
+
+/* Canvas */
+canvas {
+    background: #000;
+    border: 3px solid #0ff;
+    border-radius: 10px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 20px #0ff;
+}
+
+/* Buttons */
+button {
+    margin: 5px;
+    padding: 8px 15px;
+    background: #0ff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #00ffffcc;
+    box-shadow: 0 0 10px #0ff;
+}
+
+/* Score Box */
+.score-box {
+    margin-top: 10px;
+    font-size: 1em;
+    text-shadow: 0 0 5px #0ff;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #000;
+    padding: 25px 30px;
+    border: 3px solid #0ff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 25px #0ff;
+}
+
+.popup-content h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.hidden { display: none; }
